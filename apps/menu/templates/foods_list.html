@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Lista de comidas</h1>
+<a class="btn btn-primary" href="{% url 'create_food_view'%}">Agregar</a>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+    {%for food in foods%}
+      <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td>{{food.name}}</td>
+        <td>{{food.description}}</td>
+      </tr>
+    {%endfor%}
+    </tbody>
+  </table>
+{% endblock %}

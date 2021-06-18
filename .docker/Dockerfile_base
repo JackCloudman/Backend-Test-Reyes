@@ -30,7 +30,7 @@ FROM python:3.8.3-slim-buster
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-    procps vim less
+    procps vim less tmux
 
 RUN groupadd -g 1337 cornershop && \
     useradd -m -d /opt/cornershop -u 1337 -g cornershop cornershop

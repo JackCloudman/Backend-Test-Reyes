@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Menú del día de hoy</h1>
+<div class="row">
+{%for option in options%}
+<div class="card" style="width: 18rem;margin:10px;">
+    <div class="card-body">
+      <h5 class="card-title">{{option.id_food.name}}</h5>
+      <p class="card-text">{{option.id_food.description}}</p>
+    </div>
+  </div>
+{%endfor%}
+</div>
+<hr>
+<form method="POST" class="post-form">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Ordenar</button>
+</form>
+{% endblock %}
