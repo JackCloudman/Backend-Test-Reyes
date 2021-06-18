@@ -219,3 +219,8 @@ Create Menu
 ![Alt text](img/new_menu.JPG?raw=true "New Menu")
 Create Food
 ![Alt text](img/new_food.JPG?raw=true "New food")
+
+## Author
+Name: Juan Reyes  
+LinkedIn: https://www.linkedin.com/in/juanreyesvilchis/  
+Email: contacto@juanjoserv.com
