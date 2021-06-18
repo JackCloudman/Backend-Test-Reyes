@@ -9,6 +9,10 @@ from apps.menu.models import Menu
 
 
 class TestViews(TestCase):
+    """
+    Class for Test the views
+    """
+
     def setUp(self):
         self.uuid = "00000000-0000-0000-0000-000000000000"
         self.menu = Menu.objects.create(uuid=self.uuid, date=date.today())

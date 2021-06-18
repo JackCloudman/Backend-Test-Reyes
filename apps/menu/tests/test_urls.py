@@ -13,7 +13,7 @@ from apps.menu.views.orders_views import CreateOrderView, OrdersView
 
 class TestUrls(SimpleTestCase):
     """
-    Test for routes
+    Class for test the routes
     """
 
     def setUp(self):

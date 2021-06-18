@@ -7,6 +7,10 @@ from apps.menu.models import Food, Menu, MenuOption
 
 
 class TestViews(TestCase):
+    """
+    Class for Test the models
+    """
+
     def setUp(self):
         self.uuid = "00000000-0000-0000-0000-000000000000"
         self.food1 = Food.objects.create(name="Sushi", description="")
