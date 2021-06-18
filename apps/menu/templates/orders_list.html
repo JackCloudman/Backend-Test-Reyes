@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Lista de ordenes - {{menu}}</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Usuario</th>
+        <th scope="col">Platillo</th>
+        <th scope="col">Detalles</th>
+      </tr>
+    </thead>
+    <tbody>
+    {%for order in orders%}
+      <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td>{{order.username}}</td>
+        <td>{{order.selection.id_food.name}}</td>
+        <td>{{order.comments}}{%if not order.comments%} --- {%endif%}</td>
+      </tr>
+    {%endfor%}
+    {%if not orders%}
+    <tr><th></th></th><th></th><th scope="row">SIN ORDENES AUN</th><th></th></tr>
+    {%endif%}
+    </tbody>
+  </table>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Lista de menus</h1>
+<a class="btn btn-primary" href="{% url 'create_menu_view'%}">Agregar</a>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">UUID</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+    {%for menu in menus%}
+      <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td>{{menu.date}}</td>
+        <td>{{menu.uuid}}</td>
+        <td><a  href="{% url 'orders_view' uuid=menu.uuid %}">Ordenes</a></td>
+      </tr>
+    {%endfor%}
+    </tbody>
+  </table>
+{% endblock %}

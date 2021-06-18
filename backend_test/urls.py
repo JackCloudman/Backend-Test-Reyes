@@ -13,10 +13,15 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path
+from django.conf import settings
+from django.urls import include, path
 
 from .utils.healthz import healthz
 
 urlpatterns = [
     path("healthz", healthz, name="healthz"),
 ]
+
+# Load urls if app is installed
+if "apps.menu" in settings.INSTALLED_APPS:
+    urlpatterns += (path("", include("apps.menu.urls")),)
