@@ -63,4 +63,4 @@ class OrdersView(View):
             return redirect("/")
         menu = get_object_or_404(Menu, uuid=uuid)
         orders = Order.objects.filter(selection__id_menu=menu)
-        return render(request, "orders_list.html", {"orders": orders})
+        return render(request, "orders_list.html", {"orders": orders, "menu": menu})

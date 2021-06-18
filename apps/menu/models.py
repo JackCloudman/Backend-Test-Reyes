@@ -59,7 +59,7 @@ class Order(models.Model):
     """
     Description: Class that contain information about Order
     Fields:
-        Username: User that order
+        Username: User that order, max_length 50
         Selection: A unique food selection
         Comments: a extra field for extra comments in your order
     """
