@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "django_extensions",
     "backend_test.utils",
+    "apps.menu",
 ]
 
 MIDDLEWARE = [
@@ -132,7 +133,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/Santiago"
 
 USE_I18N = True
 
@@ -208,7 +209,7 @@ LOGGING = {
         "fluent": {
             "class": "fluent.handler.FluentHandler",
             "host": os.getenv("FLUENT_HOST", "fluentbit"),
-            "port": int(os.getenv("FLUENT_PORT", 24224)),
+            "port": int(os.getenv("FLUENT_PORT", "24224")),
             "tag": os.getenv("FLUENT_TAG", "catalog"),
             "formatter": "fluent_formatter",
             "level": "INFO",
@@ -235,3 +236,9 @@ LOGGING = {
         },
     },
 }
+
+# Changed URL for login
+LOGIN_URL = "login_view"
+
+# Config time for max order time
+MAX_ORDER_TIME = 11  # CLT
