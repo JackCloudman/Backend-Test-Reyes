@@ -41,7 +41,7 @@ pytest-freezegun==0.4.1
 pytest-isort==1.1.0
 python-dateutil==2.8.1
 pytz==2020.1
-redis==3.5.3
+redis==4.4.4
 regex==2020.6.8
 sentry-sdk==0.16.0
 six==1.15.0
